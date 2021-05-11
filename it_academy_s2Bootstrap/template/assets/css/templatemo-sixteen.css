@@ -1026,8 +1026,11 @@ footer .inner-content p a {
     margin-top: 30px;
     margin-left: 0px;
   }
+  .owl-stage-outer {
+    height: 350px;
+  }
 }
-.modal{
+.modal {
   z-index: 99999;
 }
 
@@ -1086,13 +1089,13 @@ footer .inner-content p a {
     right: 0;
     bottom: 0;
   }
-  #ul-login-hidden{
+  #ul-login-hidden {
     display: block !important;
   }
-  #ul-login{
+  #ul-login {
     display: none;
   }
-  #link-login-hidden{
-    color: tomato!important;
+  #link-login-hidden {
+    color: tomato !important;
   }
 }
