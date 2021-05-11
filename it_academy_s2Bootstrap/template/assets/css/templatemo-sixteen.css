@@ -12,6 +12,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1,
+h2 {
+  /* font-family: 'Lato', sans-serif; */
+  font-family: "Lobster", cursive;
+}
+
 p {
   margin-bottom: 0px;
   font-size: 14px;
@@ -83,7 +90,7 @@ a.filled-button:hover {
 .section-heading {
   text-align: left;
   margin-bottom: 60px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #21252961;
 }
 
 .section-heading h2 {
@@ -91,6 +98,32 @@ a.filled-button:hover {
   font-weight: 400;
   color: #1e1e1e;
   margin-bottom: 15px;
+}
+
+.bg-body {
+  background: rgb(16, 180, 232);
+  background: linear-gradient(
+    170deg,
+    rgb(35 38 39 / 9%) 34%,
+    rgba(10, 7, 2, 0.025647759103641476) 56%,
+    rgba(75, 7, 7, 0.363) 82%
+  );
+}
+
+.bg-card {
+  background: rgb(16, 180, 232);
+  background: linear-gradient(
+    170deg,
+    rgba(16, 180, 232, 0.26094187675070024) 29%,
+    rgba(10, 7, 2, 0.6362920168067228) 66%,
+    rgba(189, 34, 34, 0.6474964985994398) 94%
+  );
+}
+
+.bg-box {
+  background: radial-gradient(circle, #07cae92e 0%, rgb(164 84 84 / 48%) 100%);
+  box-shadow: rgb(17 17 26 / 10%) 0px 8px 24px, #52639929 0px 16px 56px,
+    rgb(17 17 26 / 10%) 0px 24px 80px;
 }
 
 .products-heading {
@@ -225,10 +258,10 @@ header {
 }
 
 header .navbar {
-  padding: 17px 0px;
+  padding: 5px 0px;
 }
 .background-header .navbar {
-  padding: 17px 0px;
+  padding: 5px 0px;
 }
 .background-header {
   top: 0;
@@ -333,7 +366,7 @@ header .navbar {
 
 .banner-item-02 {
   padding: 300px 0px;
-  background-image: url(../images/slide_02.jpg);
+  background-image: url(../images/dive.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -341,7 +374,15 @@ header .navbar {
 
 .banner-item-03 {
   padding: 300px 0px;
-  background-image: url(../images/slide_03.jpg);
+  background-image: url(../images/magicmazeonmars.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.banner-item-04 {
+  padding: 300px 0px;
+  background-image: url(../images/excavation-earth.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -986,10 +1027,13 @@ footer .inner-content p a {
     margin-left: 0px;
   }
 }
+.modal{
+  z-index: 99999;
+}
 
 @media (max-width: 992px) {
   .navbar .navbar-brand {
-    position: absolute;
+    /* position: absolute; */
     left: 30px;
     top: 32px;
   }
@@ -1041,5 +1085,14 @@ footer .inner-content p a {
     position: relative;
     right: 0;
     bottom: 0;
+  }
+  #ul-login-hidden{
+    display: block !important;
+  }
+  #ul-login{
+    display: none;
+  }
+  #link-login-hidden{
+    color: tomato!important;
   }
 }

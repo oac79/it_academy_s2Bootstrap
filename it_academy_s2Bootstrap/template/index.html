@@ -22,14 +22,19 @@ https://templatemo.com/tm-546-sixteen-clothing
 
 -->
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Lobster&display=swap"
+    rel="stylesheet">
+
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../fontawesome-free-5.15.3-web/css/all.css">
   <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
   <link rel="stylesheet" href="assets/css/owl.css">
 
 </head>
 
-<body>
+<body class="bg-body">
 
   <!-- ***** Preloader Start ***** -->
   <div id="preloader">
@@ -44,7 +49,7 @@ https://templatemo.com/tm-546-sixteen-clothing
   <!-- Header -->
   <div class="pre-header">
     <div class="container d-flex justify-content-center p-3">
-      <span class="text-white"><i class="fa-truck mr-2"></i> Envío gratis a partir de 40€</span>
+      <span class="text-white"><i class="fas fa-truck mr-2"></i> Envío gratis a partir de 40€</span>
     </div>
   </div>
   <header class="">
@@ -52,12 +57,20 @@ https://templatemo.com/tm-546-sixteen-clothing
       <div class="container">
         <a class="navbar-brand" href="index.html"><img src="./assets/images/logo2.png" alt="logo"
             style="width: 75px; height:75px ;"></a>
+
+        <ul class="navbar-nav mr-auto" id="ul-login-hidden" style="display: none;">
+          <li class="nav-item">
+            <a type="button" class="nav-link" id="link-login-hidden" href="#modal-login" data-toggle="modal">Login
+              <i class="fas fa-sign-in-alt" style="color: tomato;"></i></a>
+          </li>
+        </ul>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mr-auto">
+          <!-- <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="index.html">Home
                 <span class="sr-only">(current)</span>
@@ -72,11 +85,134 @@ https://templatemo.com/tm-546-sixteen-clothing
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
+          </ul> -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Catálogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Género de juegos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Familiar</a>
+                <a class="dropdown-item" href="#">Eurogame</a>
+                <a class="dropdown-item" href="#">Abstracto</a>
+                <a class="dropdown-item" href="#">Wargame</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Importación</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav" id="ul-login">
+            <li class="nav-item">
+              <a type="button" class="nav-link" href="#modal-login" data-toggle="modal">Login
+                <i class="fas fa-sign-in-alt" style="color: rgb(240, 89, 89);"></i></a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+
+  <!---------------MODAL LOGIN---------->
+  <div class="modal fade" id="modal-login">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="ion-ios-person"><img src="./assets/images/logo2.png" alt="sign in" class="rounded-circle"
+                style="width: 100px; height: 100px;"> </span>
+
+          </div>
+          <h3 class="text-center mb-4">Iniciar sesión</h3>
+          <form action="#" class="login-form">
+            <div class="form-group">
+              <input type="text" class="form-control rounded-left" placeholder="Email">
+            </div>
+            <div class="form-group d-flex">
+              <input type="password" class="form-control rounded-left" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+            </div>
+            <div class="form-group d-md-flex">
+              <div class="form-check w-50">
+                <label class="custom-control fill-checkbox">
+                  <input type="checkbox" class="fill-control-input">
+                  <span class="fill-control-indicator"></span>
+                  <span class="fill-control-description">Recuérdame</span>
+                </label>
+              </div>
+              <div class="w-50 text-md-right">
+                <a href="#">¿Has olvidado tu password?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <p>¿Todavía no tienes una cuenta? <a href="#modal-register" data-toggle="modal" id="create-acount">Crear una
+              cuenta</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------MODAL REGISTRO--------->
+  <div class="modal fade h-auto" id="modal-register">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4 p-md-3">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="ion-ios-person"><img src="./assets/images/logo2.png" alt="sign in" class="rounded-circle"
+                style="width: 100px; height:100px;"> </span>
+            <h3 class="text-center mb-1">Formulario de Registro</h3>
+          </div>
+
+          <form action="#" class="login-form">
+            <div class="form-group">
+              <input type="text" class="form-control rounded-left" placeholder="Email">
+            </div>
+            <div class="form-group d-flex">
+              <input type="password" class="form-control rounded-left" placeholder="Password">
+            </div>
+            <div class="form-group d-flex">
+              <input type="password" class="form-control rounded-left" placeholder="Confirmar Password">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn btn-primary rounded submit px-3">Registro</button>
+            </div>
+            <div class="form-group d-md-flex">
+              <div class="form-check w-100">
+                <label class="custom-control fill-checkbox">
+                  <input type="checkbox" class="fill-control-input">
+                  <span class="fill-control-indicator"></span>
+                  <span class="fill-control-description">Acepto las condiciones de uso</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <p>@2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Page Content -->
   <!-- Banner Starts Here -->
@@ -90,14 +226,18 @@ https://templatemo.com/tm-546-sixteen-clothing
       </div>
       <div class="banner-item-02">
         <div class="text-content">
-          <h2>PRÓXIMAMENTE</h2>
+          <!-- <h2>Próximamente</h2> -->
           <!-- <h2></h2> -->
         </div>
       </div>
       <div class="banner-item-03">
         <div class="text-content">
-          <h4>Last Minute</h4>
-          <h2>Grab last minute deals</h2>
+        </div>
+      </div>
+      <div class="banner-item-04">
+        <div class="text-content">
+          <!-- <h2>Próximamente</h2> -->
+          <!-- <h2></h2> -->
         </div>
       </div>
     </div>
@@ -109,16 +249,18 @@ https://templatemo.com/tm-546-sixteen-clothing
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Latest Products</h2>
-            <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
+            <h2>Novedades</h2>
+            <a href="products.html">Ver Catálogo <i class="fa fa-angle-right"></i></a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
-            <div class="down-content">
+            <div class="card-header bg-card">
+              <a href="#"><img class="mt-2" src="assets/images/expediciones-ming-box.png" alt=""></a>
+            </div>
+            <div class="down-content bg-white">
               <a href="#">
-                <h4>Tittle goes here</h4>
+                <h4>Las Expediciones Ming</h4>
               </a>
               <h6>$25.75</h6>
               <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
@@ -135,12 +277,14 @@ https://templatemo.com/tm-546-sixteen-clothing
         </div>
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
-            <div class="down-content">
+            <div class="card-header bg-card">
+              <a href="#"><img class="mt-2" src="assets/images/dualpowers.png" alt=""></a>
+            </div>
+            <div class="down-content bg-white">
               <a href="#">
-                <h4>Tittle goes here</h4>
+                <h4>Dual Powers</h4>
               </a>
-              <h6>$30.25</h6>
+              <h6>$25.75</h6>
               <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
               <ul class="stars">
                 <li><i class="fa fa-star"></i></li>
@@ -149,38 +293,20 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <li><i class="fa fa-star"></i></li>
                 <li><i class="fa fa-star"></i></li>
               </ul>
-              <span>Reviews (21)</span>
+              <span>Reviews (24)</span>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="assets/images/product_03.jpg" alt=""></a>
-            <div class="down-content">
-              <a href="#">
-                <h4>Tittle goes here</h4>
-              </a>
-              <h6>$20.45</h6>
-              <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
-              <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-              </ul>
-              <span>Reviews (36)</span>
+            <div class="card-header bg-card">
+              <a href="#"><img class="mt-2" src="assets/images/la-marcha-del-progreso-1.png" alt=""></a>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="#"><img src="assets/images/product_04.jpg" alt=""></a>
-            <div class="down-content">
+            <div class="down-content bg-white">
               <a href="#">
-                <h4>Tittle goes here</h4>
+                <h4>La Marcha del Progreso</h4>
               </a>
-              <h6>$15.25</h6>
+              <h6>$25.75</h6>
               <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
               <ul class="stars">
                 <li><i class="fa fa-star"></i></li>
@@ -189,18 +315,20 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <li><i class="fa fa-star"></i></li>
                 <li><i class="fa fa-star"></i></li>
               </ul>
-              <span>Reviews (48)</span>
+              <span>Reviews (24)</span>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="assets/images/product_05.jpg" alt=""></a>
-            <div class="down-content">
+            <div class="card-header bg-card">
+              <a href="#"><img class="mt-2" src="assets/images/belfort.png" alt=""></a>
+            </div>
+            <div class="down-content bg-white">
               <a href="#">
-                <h4>Tittle goes here</h4>
+                <h4>Belfort</h4>
               </a>
-              <h6>$12.50</h6>
+              <h6>$25.75</h6>
               <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
               <ul class="stars">
                 <li><i class="fa fa-star"></i></li>
@@ -209,18 +337,20 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <li><i class="fa fa-star"></i></li>
                 <li><i class="fa fa-star"></i></li>
               </ul>
-              <span>Reviews (16)</span>
+              <span>Reviews (24)</span>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="assets/images/product_06.jpg" alt=""></a>
-            <div class="down-content">
+            <div class="card-header bg-card">
+              <a href="#"><img class="mt-2" src="assets/images/cousinswar.png" alt=""></a>
+            </div>
+            <div class="down-content bg-white">
               <a href="#">
-                <h4>Tittle goes here</h4>
+                <h4>The Cousins' War</h4>
               </a>
-              <h6>$22.50</h6>
+              <h6>$25.75</h6>
               <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
               <ul class="stars">
                 <li><i class="fa fa-star"></i></li>
@@ -229,7 +359,29 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <li><i class="fa fa-star"></i></li>
                 <li><i class="fa fa-star"></i></li>
               </ul>
-              <span>Reviews (32)</span>
+              <span>Reviews (24)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-item">
+            <div class="card-header bg-card">
+              <a href="#"><img class="mt-2" src="assets/images/escape-pods2.png" alt=""></a>
+            </div>
+            <div class="down-content bg-white">
+              <a href="#">
+                <h4>Escape Pods</h4>
+              </a>
+              <h6>$25.75</h6>
+              <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+              <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+              <span>Reviews (24)</span>
             </div>
           </div>
         </div>
@@ -242,12 +394,12 @@ https://templatemo.com/tm-546-sixteen-clothing
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>About Sixteen Clothing</h2>
+            <h2>Sobre Waterfall Boards Games</h2>
           </div>
         </div>
         <div class="col-md-6">
           <div class="left-content">
-            <h4>Looking for the best products?</h4>
+            <h4>Buscas los mejores precios?</h4>
             <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This
                 template</a> is free to use for your business websites. However, you have no permission to redistribute
               the downloadable ZIP file on any template collection website. <a rel="nofollow"
@@ -259,12 +411,12 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li><a href="#">Corporis, omnis doloremque</a></li>
               <li><a href="#">Non cum id reprehenderit</a></li>
             </ul>
-            <a href="about.html" class="filled-button">Read More</a>
+            <a href="about.html" class="filled-button">Leer más..</a>
           </div>
         </div>
         <div class="col-md-6">
           <div class="right-image">
-            <img src="assets/images/feature-image.jpg" alt="">
+            <img src="assets/images/neverland-logo.png" alt="">
           </div>
         </div>
       </div>
@@ -278,13 +430,18 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="col-md-12">
           <div class="inner-content">
             <div class="row">
-              <div class="col-md-8">
-                <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.
-                </p>
+              <div class="col-md-6">
+                <h4>Suscríbete a <em>Nuestra</em> Newsletter</h4>
+                <p>Recibe todas las novedades con descuentos increíbles.</p>
               </div>
-              <div class="col-md-4">
-                <a href="#" class="filled-button">Purchase Now</a>
+              <div class="col-md-6">
+                <form action="#">
+                  <div class="form-group d-flex flex-column">
+                    <input type="email" name="" id="" placeholder="Introduzca su Email...">
+                    <a href="#" class="filled-button d-flex justify-content-center">Suscríbete</a>
+                  </div>
+                </form>
+                
               </div>
             </div>
           </div>
@@ -320,6 +477,9 @@ https://templatemo.com/tm-546-sixteen-clothing
   <script src="assets/js/slick.js"></script>
   <script src="assets/js/isotope.js"></script>
   <script src="assets/js/accordions.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="../fontawesome-free-5.15.3-web/js/all.js"></script>
 
 
   <script language="text/Javascript">
